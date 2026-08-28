@@ -1,0 +1,59 @@
+.visualization-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.visualization-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chart-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.chart-item p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 16px;
+}
+
+/* Responsive Design for Graphs */
+@media screen and (max-width: 600px) {
+  .visualization-container {
+      padding: 10px;
+  }
+
+  h2 {
+      font-size: 18px;
+  }
+
+  .chart-item {
+      padding: 10px;
+  }
+}

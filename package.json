@@ -1,0 +1,18 @@
+{
+  "name": "workforce-pulse-enterprise",
+  "version": "1.0.0",
+  "description": "Enterprise HR & Workforce Intelligence Suite",
+  "main": "cloud-project-backend/server.js",
+  "scripts": {
+    "install-backend": "cd cloud-project-backend && npm install",
+    "install-frontend": "cd cloud-project-frontend && npm install",
+    "build-frontend": "cd cloud-project-frontend && npm run build",
+    "build": "npm run install-backend && npm run install-frontend && npm run build-frontend",
+    "start": "node cloud-project-backend/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.7.2"
+  }
+}

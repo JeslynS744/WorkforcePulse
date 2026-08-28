@@ -29,12 +29,6 @@ Designed with a bespoke **Warm Sand & Forest Emerald** design language, modern t
 * **Full CRUD Operations:** Add new employees, update existing compensation/roles, and remove records directly through a sleek modal interface.
 * **Dynamic Avatar Avatars & Tags:** Algorithmic gradient avatars generated from employee names, soft tinted department badges, and formatted CTC chips.
 
-### 🎨 Warm Sand & Forest Emerald Design System
-* High-end, organic editorial aesthetic tailored for executive decision-making.
-* Pure vanilla CSS design tokens (no bulky third-party CSS frameworks).
-* Crisp typography combining **Outfit** and **Plus Jakarta Sans**.
-* Fully responsive across mobile, tablet, and widescreen desktop monitors.
-
 ---
 
 ## 🛠️ Technology Stack
@@ -77,75 +71,6 @@ WorkforcePlus/
 └── 📄 README.md                     # Documentation & Setup Guide
 ```
 
----
-
-## 🚀 Running Locally
-
-### Option 1: Using Docker Compose (Recommended - Zero Configuration)
-Ensure Docker Desktop is installed and running, then execute:
-
-```bash
-# Clone the repository
-git clone https://github.com/JeslynS744/WorkforcePlus.git
-cd WorkforcePlus
-
-# Build and start all 3 containers (MongoDB, Backend, Frontend)
-docker-compose up --build
-```
-
-* **Frontend UI:** `http://localhost:3000`
-* **Backend API:** `http://localhost:5000`
-* **MongoDB Database:** `localhost:27017`
-
----
-
-### Option 2: Manual Local Setup (Without Docker)
-
-#### 1. Start the Backend:
-```bash
-cd cloud-project-backend
-npm install
-npm start
-```
-*(Backend runs on `http://localhost:5000`)*
-
-#### 2. Start the Frontend:
-```bash
-cd ../cloud-project-frontend
-npm install
-npm start
-```
-*(Frontend opens automatically at `http://localhost:3000`)*
-
----
-
-## 🌐 Cloud Deployment (Render Single-URL Setup)
-
-This project is configured for **Single-URL Deployment** on Render where the Express backend builds and serves the React frontend alongside the API from one single domain.
-
-1. Push your repository to GitHub:
-   ```bash
-   git add .
-   git commit -m "feat: complete workforce pulse app"
-   git push -u origin main
-   ```
-
-2. Open **[Render.com](https://dashboard.render.com)** and create a new **Web Service**.
-3. Connect your **`WorkforcePlus`** repository and configure:
-   * **Root Directory:** *(Leave blank)*
-   * **Runtime:** `Node`
-   * **Build Command:** `npm run build`
-   * **Start Command:** `npm start`
-   * **Instance Type:** `Free`
-
-4. Add your **Environment Variable**:
-   * **Key:** `MONGODB_URI`
-   * **Value:** `mongodb+srv://<username>:<password>@cluster0.abcde.mongodb.net/workforce?retryWrites=true&w=majority`
-
-5. Click **Deploy Web Service**. Render will generate your live production URL:
-   ```text
-   https://workforce-plus.onrender.com
-   ```
 
 ---
 

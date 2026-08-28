@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -26,11 +27,19 @@ mongoose.connect(mongoURI)
 
 // Serve compiled React frontend files in Production (Single-URL Deployment)
 const frontendBuildPath = path.join(__dirname, '../cloud-project-frontend/build');
-app.use(express.static(frontendBuildPath));
+const indexPath = path.join(frontendBuildPath, 'index.html');
+
+if (fs.existsSync(frontendBuildPath)) {
+    app.use(express.static(frontendBuildPath));
+}
 
 // Any request that doesn't match API routes returns the React Single-Page Application
 app.get('*', (req, res) => {
-    res.sendFile(path.join(frontendBuildPath, 'index.html'));
+    if (fs.existsSync(indexPath)) {
+        res.sendFile(indexPath);
+    } else {
+        res.status(200).send('Backend API is live! Frontend build is compiling or not found in build directory.');
+    }
 });
 
 // Start the server

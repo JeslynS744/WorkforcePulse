@@ -4,10 +4,7 @@
   "description": "Enterprise HR & Workforce Intelligence Suite",
   "main": "cloud-project-backend/server.js",
   "scripts": {
-    "install-backend": "cd cloud-project-backend && npm install",
-    "install-frontend": "cd cloud-project-frontend && npm install",
-    "build-frontend": "cd cloud-project-frontend && npm run build",
-    "build": "npm run install-backend && npm run install-frontend && npm run build-frontend",
+    "build": "npm install --prefix cloud-project-backend && npm install --prefix cloud-project-frontend && npm run build --prefix cloud-project-frontend",
     "start": "node cloud-project-backend/server.js"
   },
   "dependencies": {

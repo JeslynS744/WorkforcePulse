@@ -10,6 +10,7 @@
 **WorkforcePulse** is an enterprise-grade, full-stack HR & Workforce Analytics platform built using the **MERN Stack** (MongoDB, Express.js, React, Node.js). It provides executive teams with real-time workforce headcount metrics, compensation benchmarking, interactive data slicing, and an intuitive talent directory with full CRUD capabilities.
 
 Designed with a bespoke **Warm Sand & Forest Emerald** design language, modern typography, and responsive data visualizations powered by **Recharts**.
+
 🔗 **Live Application:** [https://workforceplus.onrender.com/](https://workforceplus.onrender.com/)
 ---
 

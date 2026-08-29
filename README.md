@@ -86,6 +86,3 @@ WorkforcePlus/
 | `DELETE` | `/users/:id` | Deletes an employee from the directory |
 
 ---
-
-## 📄 License
-This project is developed for educational and enterprise workforce intelligence demonstration.
